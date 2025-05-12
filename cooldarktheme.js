@@ -17,7 +17,7 @@
     htmlElement.style.setProperty(varName, value);
   }
 
-  // Ensure a dark theme class is applied (optional, since we're setting variables directly)
+  // Ensure a dark theme class is applied
   const hasTheme = htmlElement.classList.contains('dark_theme') || htmlElement.classList.contains('midnight_theme');
   if (!hasTheme) {
     htmlElement.classList.add('dark_theme');
@@ -27,4 +27,13 @@
   selectedElements.forEach((element) => {
     element.style.setProperty('background', 'var(--secondary-color)', 'important');
   });
+
+  // Inject a CSS rule to adjust the hover effect for .selected to be even lighter
+  const styleSheet = document.createElement('style');
+  styleSheet.textContent = `
+    .sidebar li .selected:hover {
+      filter: brightness(100%) !important;
+    }
+  `;
+  document.head.appendChild(styleSheet);
 })();
