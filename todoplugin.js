@@ -16,7 +16,7 @@ window.toggleTodoCard = async function () {
   }
 };
 
-const STORAGE_KEY = 'todoplguin_data';
+const STORAGE_KEY = 'todoplugin_data';
 
 function getTodos() {
   try {
