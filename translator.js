@@ -4,8 +4,8 @@
       #translator_card {
         position: fixed;
         bottom: 80px;
-        right: 20px;
-        width: 340px;
+        right: 16px;
+        width: 90vw;
         background: var(--darker-secondary-color, #1e1e1e);
         padding: 12px;
         border-radius: 16px;
