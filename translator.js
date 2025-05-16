@@ -5,7 +5,7 @@
         position: fixed;
         bottom: 80px;
         right: 16px;
-        width: 90vw;
+        width: clamp(320px, 90vw, 400px);
         background: var(--darker-secondary-color, #1e1e1e);
         padding: 12px;
         border-radius: 16px;
